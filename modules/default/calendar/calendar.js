@@ -18,7 +18,7 @@ Module.register("calendar",{
 		displayRepeatingCountTitle: false,
 		defaultRepeatingCountTitle: '',
 		maxTitleLength: 25,
-		fetchInterval: 5 * 60 * 1000, // Update every 5 minutes.
+		fetchInterval: 1 * 60 * 1000, // Update every 1 minute.
 		animationSpeed: 2000,
 		fade: true,
 		urgency: 7,
@@ -332,7 +332,7 @@ Module.register("calendar",{
 	},
 
 	/* shorten(string, maxLength)
-	 * Shortens a sting if it's longer than maxLenthg.
+	 * Shortens a sting if it's longer than maxLength.
 	 * Adds an ellipsis to the end.
 	 *
 	 * argument string string - The string to shorten.
