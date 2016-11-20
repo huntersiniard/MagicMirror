@@ -11,7 +11,6 @@ Module.register("email",{
         port: 993,
         tls: true,
         authTimeout: 10000,
-//	maxTitleLength: 25,
         numberOfEmails: 5,
         fade: true
     },
@@ -77,8 +76,7 @@ Module.register("email",{
 
                 var subjectWrapper = document.createElement("tr");
                 subjectWrapper.className = "light";
-		subjectWrapper.innerHTML = subject
-              //  subjectWrapper.innerHTML = this.shorten(subject,maxTitleLength);
+                subjectWrapper.innerHTML = subject;
                 emailWrapper.appendChild(subjectWrapper);
 
                 wrapper.appendChild(emailWrapper);
@@ -102,43 +100,6 @@ Module.register("email",{
         }
 
         return wrapper;
-    },
- //   {
-	/* shorten(string, maxLength)
-         * Shortens a sting if it's longer than maxLength.
-         * Adds an ellipsis to the end.
-         *
-         * argument string string - The string to shorten.
-         * argument maxLength number - The max lenth of the string.
-         * 
-         * return string - The shortened string.
-         */
-  //      shorten: function(string, maxLength) {
-  //              if (string.length > maxLength) {
-  //                      return string.slice(0,maxLength) + "&hellip;";
-  //              }
-
-//                return string;
-//    },
-//    {
-        /* titleTransform(title)
-         * Transforms the title of an event for usage.
-         * Replaces parts of the text as defined in config.titleReplace.
-         * Shortens title based on config.maxTitleLength
-         *
-         * argument title string - The title to transform.
-         *
-         * return string - The transformed title.
-         */
-//        titleTransform: function(title) {
-//                for (var needle in this.config.titleReplace) {
-//                        var replacement = this.config.titleReplace[needle];
-//                        title = title.replace(needle, replacement);
-//                }
-
-//                title = this.shorten(title, this.config.maxTitleLength);
-                return title;
-//   }
-
+    }
 
 });
